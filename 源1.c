@@ -1,32 +1,25 @@
+#define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
+void Swap(int* pa, int* pb)
+{
+	int tmp = 0;
+	tmp = *pa;
+	*pa = *pb;
+	*pb = tmp;
+}
 int main()
 {
-	int day = 0;
-	scanf_s("%d", &day);
-	switch (day)
-	{
-	case 1:
-		printf("Monday\n");
-		break;
-	case 2:
-		printf("Tuesday\n");
-		break;
-	case 3:
-		printf("Wednesday\n");
-		break;
-	case 4:
-		printf("Thursday\n");
-		break;
-	case 5:
-		printf("Friday\n");
-		break;
-	case 6:
-		printf("Saturday\n");
-		break;
-	case 7:
-		printf("Sunday\n");
-		break;
-
-	}
+	int a = 60;
+	int b = 90;
+	Swap(&a, &b);
+	printf("a=%d b=%d\n", a, b);
 	return 0;
+	/*int a = 80;
+	int b = 100;
+	int c = 0;
+	c = a;
+	a = b;
+	b = c;
+	printf("a=%d b=%d\n", a, b);
+	return 0;*/
 }
